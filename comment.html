@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>comment</title>
+  </head>
+  <body>
+    <h1>Comment Box</h1>
+    <div id="comment-container">
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum,
+            doloremque.
+          </p>
+    </div>
+    <div>
+        <textarea  id="text-area" cols="30" rows="10"></textarea>
+        <button id="update-btn">Update Kor Sala</button>
+    </div>
+    <script>
+        document.getElementById('update-btn').addEventListener('click', function(){
+            const textArea = document.getElementById('text-area').value
+            const commentContainer = document.getElementById('comment-container')
+            const p = document.createElement('p')
+            p.innerText = textArea
+            commentContainer.appendChild(p)
+            // clear step
+            textArea.value = ''
+        })
+    </script>
+  </body>
+</html>

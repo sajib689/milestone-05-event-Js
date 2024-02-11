@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Event</title>
+</head>
+<body>
+    <h1>Final Event Handler</h1>
+    <h1 id="handler-status">Default Text</h1>
+    <button onclick="handleOnclick()">Handle Onclick Function</button>
+    
+    <input type="text" id="input-filed">
+    <button id="update-btn">Update Text</button>
+    <script>
+        function handleOnclick () {
+            document.body.style.backgroundColor = 'orange'
+            const handlerStatus = document.getElementById('handler-status')
+            handlerStatus.innerText = 'Handle tumi change hmoya jao moni'
+        }
+       document.getElementById('update-btn').addEventListener('click', function () {
+            const text = document.getElementById('input-filed')
+            const handlerStatus = document.getElementById('handler-status')
+            handlerStatus.innerText = text.value
+        })
+    </script>
+</body>
+</html>
